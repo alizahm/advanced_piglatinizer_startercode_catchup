@@ -42,20 +42,26 @@ $(document).ready(function() {
     // Otherwise, return the result of convertWordWithConsonant.
     function convertWordToPigLatin(word) {
         if (word === wordStartsWithVowel) {
-            return appendYayToWord; 
-        
+            return appendYayToWord(word); 
+        }
         else {
-          return convertWordWithConsonant; 
+          return convertWordWithConsonant(word); 
         }
             
-    
     }
 
-var testWord3 = "giraffe";
+var testWord3 = "apple";
 var testResult3 = convertWordToPigLatin(testWord3);
 console.log(testResult3);
     // Create a click handler that takes is triggered when the user clicks the translate button.
         // Gets a word from the input box
         // Transforms the word to pig latin
         // Displays the result on the screen in the output element
+    $("#translate").click(function(){
+        var wordValue = $("#word").val()
+        var transformWord = convertWordToPigLatin(wordValue)
+        console.log(transformWord)
+        
+    });    
+        
 });
