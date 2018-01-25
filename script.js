@@ -15,10 +15,10 @@ $(document).ready(function() {
         if ((firstLetter === "a") || (firstLetter === "e")|| (firstLetter === "i")|| 
             (firstLetter === "o")|| (firstLetter === "u")) {
                 
-            return "true";
+            return true;
         }
         else {
-            return "false";
+            return false;
         }
 
     }
@@ -41,8 +41,7 @@ $(document).ready(function() {
     // If the word starts with a vowel, return the result of appendYayToWord.
     // Otherwise, return the result of convertWordWithConsonant.
     function convertWordToPigLatin(word) {
-        if (word === wordStartsWithVowel(word)){
-        //if (wordStartsWithVowel(word)){
+        if (wordStartsWithVowel(word)){
             return appendYayToWord(word); 
         }
         else {
