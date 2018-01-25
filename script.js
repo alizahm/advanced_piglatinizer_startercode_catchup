@@ -41,7 +41,8 @@ $(document).ready(function() {
     // If the word starts with a vowel, return the result of appendYayToWord.
     // Otherwise, return the result of convertWordWithConsonant.
     function convertWordToPigLatin(word) {
-        if (word === wordStartsWithVowel) {
+        if (word === wordStartsWithVowel(word)){
+        //if (wordStartsWithVowel(word)){
             return appendYayToWord(word); 
         }
         else {
@@ -61,6 +62,7 @@ console.log(testResult3);
         var wordValue = $("#word").val()
         var transformWord = convertWordToPigLatin(wordValue)
         console.log(transformWord)
+            $("#output").append(transformWord)
         
     });    
         
